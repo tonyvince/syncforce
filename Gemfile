@@ -9,6 +9,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'figaro', '>= 1.2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+# Salesforce ruby client
+gem 'restforce', '~> 5.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Linting using rubocop
