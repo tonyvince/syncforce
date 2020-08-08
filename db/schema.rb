@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_08_164108) do
+ActiveRecord::Schema.define(version: 2020_08_08_174352) do
 
   create_table "dealers", force: :cascade do |t|
-    t.integer "salesforce_id"
+    t.string "salesforce_id"
     t.string "name"
     t.string "street"
     t.string "zipcode"
@@ -21,10 +21,11 @@ ActiveRecord::Schema.define(version: 2020_08_08_164108) do
     t.string "country"
     t.string "state"
     t.string "phone"
-    t.string "latitude"
-    t.string "longitude"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["salesforce_id"], name: "index_dealers_on_salesforce_id", unique: true
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
