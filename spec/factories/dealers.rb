@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :dealer do
-    salesforce_id { 1 }
+    salesforce_id { '1sds22ooi' }
     name { "MyString" }
     street { "MyString" }
     zipcode { "MyString" }
@@ -8,7 +8,7 @@ FactoryBot.define do
     country { "MyString" }
     state { "MyString" }
     phone { "MyString" }
-    latitude { "MyString" }
-    longitude { "MyString" }
+    latitude { 1.232424 }
+    longitude { -17.214234 }
   end
 end
