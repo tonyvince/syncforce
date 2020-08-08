@@ -1,0 +1,23 @@
+<header class="header">
+  <a href="" class="logo">My App</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#link1">Link1</a></li>
+    <li><a href="#link2">Link2</a></li>
+    <li><a href="#link3">Link3</a></li>
+    <li><a href="#link4">Link4</a></li>
+  </ul>
+</header>
+<div class="container first">
+  <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
+  <blockquote>
+    <p><em>Milligram provides a minimal setup of styles for a fast and clean starting point.</em></p>
+  </blockquote>
+  <a class="button" href="https://milligram.io/#typography">Docs</a>
+  <br />
+  <p>a svelte component:</p>
+  <div id="hello"></div>
+</div>
+<%= javascript_pack_tag 'hello_svelte' %>

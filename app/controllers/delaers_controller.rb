@@ -1,0 +1,2 @@
+class DelaersController < ApplicationController
+end
