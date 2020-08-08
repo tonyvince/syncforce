@@ -94,4 +94,8 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  # Immediately executes delayed jobs in tests
+  config.before do
+    Delayed::Worker.delay_jobs = false
+  end
 end
