@@ -11,6 +11,8 @@ gem 'delayed_job_active_record', '~> 4.1'
 gem 'figaro', '>= 1.2.0'
 # Encapsulate business logic using Interactor design pattern
 gem 'interactor', '~> 3.0'
+# pagination using pagy
+gem 'pagy', '~> 3.5'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Salesforce ruby client

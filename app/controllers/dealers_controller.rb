@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-# See interactors for DealersController business logic
+# @see interactors/sync_dealers.rb for DealersController business logic
 class DealersController < ApplicationController
-  skip_before_action :verify_authenticity_token
-  def index; end
+  def index
+    @pagy, @records = pagy(Dealer.order(:name))
+  end
 
   def create
     result = SyncDealers.call
