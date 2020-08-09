@@ -31,4 +31,8 @@
 
 en:
   salesforce_sync:
-    busy: 'Syncing is already in progress'
+    busy: Syncing is already in progress
+  dealers:
+    salesforce_id: Salesforce Id
+    name: Name
+    address: Address
