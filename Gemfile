@@ -9,6 +9,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'delayed_job_active_record', '~> 4.1'
 # Easy and secure configuration
 gem 'figaro', '>= 1.2.0'
+# Encapsulate business logic using Interactor design pattern
+gem 'interactor', '~> 3.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Salesforce ruby client
