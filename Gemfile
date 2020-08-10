@@ -44,6 +44,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   # Use factory bot for fixtures
   gem 'factory_bot_rails', '~> 6.1'
+  gem 'rspec_junit_formatter', '~> 0.4'
   gem 'selenium-webdriver', '~> 3.142'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers', '~> 4.4'
