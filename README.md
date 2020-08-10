@@ -35,22 +35,23 @@ This application syncs data from salesforce to the database and display the data
 Make sure you have Ruby 2.7.1 before installation
 
 ```sh
+$ git clone git@github.com:tonyvince/syncforce.git
 $ cd syncforce
-```
-Add app configuration in `config/application.yml`
-```YML
-development:
-  sf_host: test.salesforce.com
-  sf_username: webshop@on-running.com.uat
-  sf_password: HGlnGCyLYqEFjmAxv2ype9nDbUBJDsWYypgIe6egembIGh3LsaGKUC4
-  sf_client_id: 3MVG9lcxCTdG2VbtWAnBLcHTY._ahlEl2i0fxZ1XbZAKdzqKMuvDz62FAt8dol4pcWeb.T203Z0kLXKWNCr4p
-  sf_client_secret: D656D8E6C36903F7395286953AEC11FDEABCC80D62048632341699F8A661A92A
-  maps_api_key: YOUR_MAPS_API_KEY
 ```
 Install dependencies..
 ```sh
 $ bundle install
 $ rails db:create db:migrate
+```
+Add app configuration in `config/application.yml`
+```YML
+development:
+  sf_host: test.salesforce.com
+  sf_username: john@doe.com
+  sf_password: abcd
+  sf_client_id: abcd.efg.i
+  sf_client_secret: scrt
+  maps_api_key: YOUR_MAPS_API_KEY
 ```
 Start background job worker...
 ```sh
