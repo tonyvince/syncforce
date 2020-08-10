@@ -16,3 +16,7 @@ require("@rails/activestorage").start()
 // const imagePath = (name) => images(name, true)
 
 import 'milligram/dist/milligram'
+// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);

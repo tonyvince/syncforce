@@ -15,6 +15,8 @@ gem 'interactor', '~> 3.0'
 gem 'pagy', '~> 3.5'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+# Add react front-end framework
+gem 'react-rails', '~> 2.6'
 # Salesforce ruby client
 gem 'restforce', '~> 5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
