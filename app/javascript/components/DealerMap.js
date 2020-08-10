@@ -16,7 +16,7 @@ class DealerMap extends React.Component {
               width={'100%'}
               height={'500px'}
               chartType="GeoChart"
-              data={data}
+              data={data.length > 1 ? data : [['Lat', 'Long', 'Name'], [47.391180, 8.507950, 'On AG']]}
               options={{
                 region: 'auto',
                 displayMode: 'markers',
