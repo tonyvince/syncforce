@@ -36,3 +36,6 @@ en:
     salesforce_id: Salesforce Id
     name: Name
     address: Address
+    map: Dealer Map
+    sync_data: Sync Dealers
+    sync_disabled: Dealers are being synced in the background..

@@ -1,34 +1,22 @@
 <div class="container first">
-  <table>
-    <thead>
-      <tr>
-        <th><%= t('dealers.salesforce_id') %></th>
-        <th><%= t('dealers.name') %></th>
-        <th><%= t('dealers.address') %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @records.each do |record| %>
-        <tr>
-          <td>
-            <%= record.salesforce_id %>
-          </td>
-          <td class="dealer" >
-            <%= record.name %>
-          </td>
-          <td>
-            <%= "#{record.street} #{record.city} #{record.zipcode} #{record.state} #{record.country}" %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <div class="clearfix">
-    <div class="float-left"><%= ' ' %></div>
-    <div class="float-right"><%= ' ' %></div>
+  <div class="row">
+    <div class="column">
+      <%= react_component('DealerList', { dealers: @records, idHeading: t('dealers.salesforce_id'),
+                                    nameHeading: t('dealers.name'), addressHeading: t('dealers.address') }) %>
+    </div>
+    <div class="column">
+      <h2 class="text-center"><%= t('dealers.map') %></h2>
+      <%= react_component('DealerMap', { mapdata: @records.pluck(:latitude, :longitude, :name), map_api_key: ENV['maps_api_key'] }) %>
+        <div class="clearfix"></div>
+        <div class="row">
+          <div class="column">
+            <%== pagy_nav(@pagy) %>
+          </div>
+          <div id="sync-button">
+            <%= button_to t('dealers.sync_data'), dealers_path, method: :post, remote: true, class: "button button-outline", data: { disable_with: 'Syncing...' } %>
+          </div>
+        </div>
+    </div>
   </div>
-
-  <%== pagy_nav(@pagy) %>
 </div>
 
