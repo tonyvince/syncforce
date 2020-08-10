@@ -2,6 +2,8 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+[![CircleCI](https://circleci.com/gh/tonyvince/syncforce.svg?style=svg)](https://circleci.com/gh/tonyvince/syncforce)
+
 This application syncs data from salesforce to the database and display the data in a map
 
 ![intro](syncforce.png)
