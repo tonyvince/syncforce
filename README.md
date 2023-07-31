@@ -22,10 +22,6 @@ This application syncs data from salesforce to the database and display the data
     - Capybara
     - Rspec
 
-### Design patterns
-  1. Interactors - Interactors are an overkill for a small application like this. But interactors are fun ¯\_(ツ)_/¯  see `app/interactors`
-  2. Service objects - see `app/services`
-
 ### Run tests
   ```sh
   $ bundle exec rspec
